@@ -1,9 +1,10 @@
 'use client';
-
+import Login from "./Login"
+import SignUp from "./SignUp"
 import { useState } from 'react';
 import { FaSearch, FaMapMarkerAlt, FaBars, FaTimes } from 'react-icons/fa';
 
-export default function Header() {
+export default function Navbar() {
   const [location, setLocation] = useState('Bengaluru');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -56,9 +57,9 @@ export default function Header() {
       </div>
 
       {/* Log In / Sign Up */}
-      <div className="hidden lg:flex space-x-4">
-        <button className="text-gray-500 hover:text-black">Log in</button>
-        <button className="text-gray-500 hover:text-black">Sign up</button>
+      <div className="hidden lg:flex space-x-4 md:flex items-center">
+        <Login />
+        <SignUp />
       </div>
 
       {/* Mobile Menu */}
@@ -106,8 +107,8 @@ export default function Header() {
 
           {/* Log In / Sign Up for Mobile */}
           <div className="flex flex-col items-center mt-8 space-y-4">
-            <button className="text-gray-500 hover:text-black">Log in</button>
-            <button className="text-gray-500 hover:text-black">Sign up</button>
+          <Login />
+          <SignUp />
           </div>
         </div>
       )}

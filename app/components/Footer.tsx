@@ -1,6 +1,6 @@
-import { FaLinkedin, FaInstagram, FaTwitter, FaYoutube, FaFacebookF } from 'react-icons/fa'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import Image from 'next/image'
+import { FaLinkedin, FaInstagram, FaTwitter, FaYoutube, FaFacebookF } from 'react-icons/fa';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import Image from 'next/image';
 
 const footerLinks = [
   {
@@ -19,7 +19,7 @@ const footerLinks = [
     title: "LEARN MORE",
     links: ["Privacy", "Security", "Terms", "Sitemap"]
   }
-]
+];
 
 const socialLinks = [
   { icon: <FaLinkedin />, href: "#" },
@@ -27,7 +27,7 @@ const socialLinks = [
   { icon: <FaTwitter />, href: "#" },
   { icon: <FaYoutube />, href: "#" },
   { icon: <FaFacebookF />, href: "#" }
-]
+];
 
 export default function Footer() {
   return (
@@ -74,16 +74,16 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-          <div>
+          <div className="flex flex-col items-start">
             <h3 className="font-bold mb-4">SOCIAL LINKS</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-4">
               {socialLinks.map((social, index) => (
                 <a key={index} href={social.href} className="text-gray-600 hover:text-gray-900">
                   {social.icon}
                 </a>
               ))}
             </div>
-            <div className="mt-4 space-y-2">
+            <div className="flex space-x-4 mb-4">
               <Image src="/appstore.png?height=40&width=120" alt="App Store" width={120} height={40} />
               <Image src="/playstore.png?height=40&width=120" alt="Google Play" width={120} height={40} />
             </div>

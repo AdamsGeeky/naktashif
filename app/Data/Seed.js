@@ -9,7 +9,6 @@ export const restaurantsData = [
 ];
 
 
-
 export const collectionsData = [
     { title: "Top Trending Spots", places: 32, image: "/move/01.jpg?height=200&width=300" },
     { title: "Best Rooftop Places", places: 42, image: "/move/02.jpg?height=200&width=300" },
@@ -24,3 +23,24 @@ export const collectionsData = [
     { title: "The Legends of Bangalore", places: 20, image: "/move/11.jpg?height=200&width=300" },
     { title: "Places for Chai Lovers", places: 13, image: "/move/12.jpg?height=200&width=300" },
 ];
+
+
+export const exploreOptions = [
+    {
+      title: "Popular Cuisines Near Me",
+      items: ["Italian", "Chinese", "Mexican", "Indian", "Japanese"]
+    },
+    {
+      title: "Popular Restaurant Types Near me",
+      items: ["Cafe", "Fast Food", "Fine Dining", "Buffet", "Food Truck"]
+    },
+    {
+      title: "Top Restaurant Chains",
+      items: ["McDonald's", "Subway", "KFC", "Pizza Hut", "Domino's"]
+    },
+    {
+      title: "Cities We Deliver To",
+    items: ["Pantami", "GRA", "Federal locost", "State Locost", "GSU"]
+    }
+  ]
+  

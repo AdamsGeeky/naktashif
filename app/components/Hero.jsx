@@ -1,5 +1,7 @@
 'use client'
 import MoreCollections from "./MoveCollection";
+import ExploreOptions from "./ExploreOptions";
+import CollectionHeader from "./CollectionHeader";
 import { motion } from "framer-motion"
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Image from 'next/image';
@@ -15,26 +17,7 @@ export default function Hero() {
   return (
     <div className="min-h-screen bg-gray-100">
       <main className="container mx-auto px-4 py-8">
-        <div className="relative mb-8">
-          <Image
-            src="/hero.jpg?height=400&width=1200"
-            alt="Top Trending Spots"
-            width={1200}
-            height={400}
-            className="w-full h-64 object-cover rounded-lg"
-            priority
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Top Trending Spots</h2>
-              <p className="text-lg text-white mb-4">
-                The restaurants that are the talk of the town. Look out for more such popular places, updated every Thursday!
-              </p>
-              <p className="text-white">32 Places</p>
-            </div>
-          </div>
-        </div>
-
+        <CollectionHeader />  
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {restaurants.map((restaurant, index) => (
             <motion.div
@@ -66,8 +49,8 @@ export default function Hero() {
             </motion.div>
           ))}
         </div>
-          {/* More Collections */}
-          <MoreCollections />
+        <MoreCollections />
+          <ExploreOptions />
       </main>
     </div>
   );

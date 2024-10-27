@@ -11,8 +11,13 @@ import React from 'react'
 // Import collectionsData from seed file
 import { collectionsData } from '../Data/Seed'
 
-// CollectionCard component without memoization
-const CollectionCard = ({ title, places, image }) => (
+interface CollectionCardProps {
+  title: string;
+  places: number;
+  image: string;
+}
+
+const CollectionCard: React.FC<CollectionCardProps> = ({ title, places, image }) => (
   <Card className="overflow-hidden">
     <div className="relative h-48">
       <Image
@@ -22,8 +27,8 @@ const CollectionCard = ({ title, places, image }) => (
         style={{ objectFit: "cover" }}
         loading="lazy"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
-      <div className="absolute bottom-0 left-0 p-4 text-white">
+      <div className="absolute bg-gradient-to-t from-black to-transparent" />
+      <div className="absolute bottom-0 p-4 text-white">
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-sm flex items-center">
           {places} Places <FiChevronRight className="ml-1" />
@@ -38,7 +43,7 @@ const CollectionCardSkeleton = () => (
   <Card className="overflow-hidden">
     <div className="relative h-48">
       <Skeleton className="h-full w-full" />
-      <div className="absolute bottom-0 left-0 p-4 w-full">
+      <div className="absolute bottom-0 left-0 w-full">
         <Skeleton className="h-6 w-3/4 mb-2" />
         <Skeleton className="h-4 w-1/2" />
       </div>

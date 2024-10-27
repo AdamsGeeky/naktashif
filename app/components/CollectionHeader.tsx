@@ -44,7 +44,7 @@ export default function CollectionHeader() {
   }
 
   return (
-    <div className="container m-4">
+    <div className="container mb-10">
       <div className="text-sm py-4 text-gray-600">
         <Link href="#" className="hover:underline">Home</Link>
         <span className="mx-2">/</span>
@@ -63,22 +63,22 @@ export default function CollectionHeader() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
         <div className="absolute top-4 right-4 flex space-x-2">
+        <Button
+            variant="outline"
+            size="sm"
+            className={`bg-white bg-opacity-20 hover:bg-opacity-30 text-white ${isSaved ? 'bg-opacity-30' : ''}`}
+            onClick={toggleSave}
+          >
+            <FiPlus className="h-4 w-4 mr-2 rounded" />
+            {isSaved ? 'Saved' : 'Save Collection'}
+          </Button>
           <Button
             variant="outline"
             size="icon"
             className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white"
             onClick={handleLinkClick}
           >
-            <FiLink2 className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            className={`bg-white bg-opacity-20 hover:bg-opacity-30 text-white ${isSaved ? 'bg-opacity-30' : ''}`}
-            onClick={toggleSave}
-          >
-            <FiPlus className="h-4 w-4 mr-2" />
-            {isSaved ? 'Saved' : 'Save Collection'}
+            <FiLink2 className="h-3 w-4" />
           </Button>
         </div>
         <motion.div

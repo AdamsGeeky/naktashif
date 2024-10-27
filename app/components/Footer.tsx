@@ -1,6 +1,7 @@
 import { FaLinkedin, FaInstagram, FaTwitter, FaYoutube, FaFacebookF } from 'react-icons/fa';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const footerLinks = [
   {
@@ -68,7 +69,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 {column.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a href="#" className="text-gray-600 hover:text-gray-900">{link}</a>
+                    <Link href="#" className="text-gray-600 hover:text-gray-900">{link}</Link>
                   </li>
                 ))}
               </ul>
@@ -78,9 +79,9 @@ export default function Footer() {
             <h3 className="font-bold mb-4">SOCIAL LINKS</h3>
             <div className="flex space-x-4 mb-4">
               {socialLinks.map((social, index) => (
-                <a key={index} href={social.href} className="text-gray-600 hover:text-gray-900">
+                <Link key={index} href={social.href} className="text-gray-600 hover:text-gray-900">
                   {social.icon}
-                </a>
+                </Link>
               ))}
             </div>
             <div className="flex space-x-4 mb-4">

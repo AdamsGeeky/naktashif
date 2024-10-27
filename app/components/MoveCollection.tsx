@@ -63,11 +63,6 @@ export default function MoreCollections() {
   }, [])
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }} // Reduced duration for quicker transitions
-    >
       <section className="py-12">
         <h2 className="text-2xl font-bold mb-6">More Collections</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -75,9 +70,10 @@ export default function MoreCollections() {
             ? Array.from({ length: 12 }).map((_, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.2 }} // Faster transition to make animations more efficient
+                  initial={{ opacity: 0, y: 20 }} 
+                  animate={{ opacity: 1, y: 0 }} 
+                  transition={{ duration: 0.5, delay: index * 0.1 }} 
+
                 >
                   <CollectionCardSkeleton />
                 </motion.div>
@@ -94,6 +90,5 @@ export default function MoreCollections() {
               ))}
         </div>
       </section>
-    </motion.div>
   )
 }

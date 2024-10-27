@@ -6,9 +6,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { exploreOptions } from "../Data/Seed"
 
 export default function ExploreOptions() {
-  const [openItems, setOpenItems] = useState([])
+  const [openItems, setOpenItems] = useState<string[]>([])
 
-  const toggleItem = (value) => {
+  const toggleItem = (value: string) => {
     setOpenItems((prevOpenItems) =>
       prevOpenItems.includes(value)
         ? prevOpenItems.filter((item) => item !== value)

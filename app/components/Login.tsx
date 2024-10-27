@@ -6,7 +6,13 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
-export default function Login({ isOpen, onClose, onLogin }) {
+interface LoginProps {
+  isOpen: boolean
+  onClose: () => void
+  onLogin: () => void
+}
+
+export default function Login({ isOpen, onClose, onLogin }: LoginProps) {
   const [phoneNumber, setPhoneNumber] = useState('')
   const [countryCode, setCountryCode] = useState('+234')
 

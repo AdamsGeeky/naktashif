@@ -7,6 +7,14 @@ import { FaSearch, FaMapMarkerAlt, FaBars, FaTimes } from 'react-icons/fa';
 export default function Navbar() {
   const [location, setLocation] = useState('Bengaluru');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false)
+
+
+  const handleLogin = () => {
+    console.log("Logged in")
+    //logic here
+  }
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -58,7 +66,11 @@ export default function Navbar() {
 
       {/* Log In / Sign Up */}
       <div className="hidden lg:flex space-x-4 md:flex items-center">
-        <Login />
+        <Login 
+          isOpen={isLoginOpen}
+          onClose={() => setIsLoginOpen(false)}
+          onLogin={handleLogin}
+        />
         <SignUp />
       </div>
 
@@ -107,7 +119,11 @@ export default function Navbar() {
 
           {/* Log In / Sign Up for Mobile */}
           <div className="flex flex-col items-center mt-8 space-y-4">
-          <Login />
+          <Login 
+          isOpen={isLoginOpen}
+          onClose={() => setIsLoginOpen(false)}
+          onLogin={handleLogin}    
+          />
           <SignUp />
           </div>
         </div>

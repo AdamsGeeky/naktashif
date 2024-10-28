@@ -66,7 +66,7 @@ export default function CollectionHeader() {
         <Button
             variant="outline"
             size="sm"
-            className={`bg-white bg-opacity-20 hover:bg-opacity-30 text-white ${isSaved ? 'bg-opacity-30' : ''}`}
+            className={`bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-md ${isSaved ? 'bg-opacity-30' : ''}`}
             onClick={toggleSave}
           >
             <FiPlus className="h-4 w-4 mr-2 rounded" />
@@ -75,7 +75,7 @@ export default function CollectionHeader() {
           <Button
             variant="outline"
             size="icon"
-            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white"
+            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-md"
             onClick={handleLinkClick}
           >
             <FiLink2 className="h-3 w-4" />

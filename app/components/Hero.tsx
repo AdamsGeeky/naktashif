@@ -1,6 +1,6 @@
 'use client'
-// import MoreCollections from "./MoveCollection";
-// import ExploreOptions from "./ExploreOptions";
+import MoreCollections from "./MoveCollection";
+import ExploreOptions from "./ExploreOptions";
 import CollectionHeader from "./CollectionHeader";
 import { motion } from "framer-motion"
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -48,8 +48,8 @@ export default function Hero() {
             </motion.div>
           ))}
         </div>
-        {/* <MoreCollections /> */}
-          {/* <ExploreOptions /> */}
+        <MoreCollections />
+          <ExploreOptions />
       </main>
     </div>
   );

@@ -93,7 +93,7 @@ export default function MoreCollections() {
                 key={collection.title}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                whileHover={{ scale: 0.5 }}
+                whileHover={{ scale: 0.05 }}
                 transition={{ duration: 0.2, delay: index * 0.05, type: "spring", stiffness: 300 }}
               >
                 <CollectionCard {...collection} />
